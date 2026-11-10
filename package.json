@@ -1,0 +1,45 @@
+{
+  "name": "create-rn",
+  "version": "0.1.0",
+  "description": "创建 Expo + Tamagui 的 Android、iOS 与 Web/H5 项目",
+  "license": "UNLICENSED",
+  "bin": {
+    "create-rn": "bundle.js"
+  },
+  "files": [
+    "bundle.js",
+    "templates"
+  ],
+  "type": "module",
+  "publishConfig": {
+    "registry": "https://npm.gbuilderchina.com/"
+  },
+  "scripts": {
+    "dev": "tsx index.ts",
+    "build": "rolldown -c rolldown.config.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "format": "vp fmt",
+    "format-check": "vp fmt --check",
+    "lint": "vp lint . --fix",
+    "prepare": "vp config",
+    "prepublishOnly": "pnpm build",
+    "smoke:package": "node scripts/smoke-package.mjs"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.8.1",
+    "execa": "^10.0.1",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.3",
+    "rolldown": "1.2.8",
+    "tsx": "^4.23.13",
+    "typescript": "^6.0.3",
+    "vite-plus": "0.3.2",
+    "vitest": "4.1.11"
+  },
+  "engines": {
+    "node": "^22.13.0 || ^24.3.0 || ^26.0.0 || >=27.0.0"
+  }
+}

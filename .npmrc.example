@@ -1,0 +1,3 @@
+registry=https://npm.gbuilderchina.com/
+# 发布凭据仅放在用户级 ~/.npmrc，禁止写入仓库或应用模板。
+# //npm.gbuilderchina.com/:_authToken=${NPM_TOKEN}

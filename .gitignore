@@ -1,0 +1,6 @@
+node_modules/
+bundle.js
+*.tgz
+.superpowers/
+.env
+.env.local

@@ -1,0 +1,15 @@
+node_modules/
+.expo/
+dist/
+dist-android/
+dist-ios/
+android/
+ios/
+.env
+.env.*
+!.env.example
+*.keystore
+*.p12
+*.mobileprovision
+*.log
+.DS_Store
