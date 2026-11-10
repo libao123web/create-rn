@@ -109,7 +109,7 @@ npm exec --yes --package=./create-rn-0.1.0.tgz -- create-rn demo --yes
 
 CLI 格式化和 lint 集中在 vite.config.ts；生成应用独立使用 Expo 的 ESLint 配置。`templates` 和 bundle.js 都必须在发布包内；模板路径以安装入口为基准解析。
 
-`pnpm install` 的 prepare 会配置 Git hooks，仓库内 `.vite-hooks/pre-commit` 在提交时运行 `vp staged`，规则同样来自 vite.config.ts。`.gitattributes` 将钩子固定为 LF，避免 Windows checkout 转换换行后被 shell 误解析。
+`pnpm install` 的 prepare 会配置 Git hooks，仓库内 `.vite-hooks/pre-commit` 在提交时运行 `vp staged`，规则同样来自 vite.config.ts。`.gitattributes` 将文本文件统一为 LF，使 Windows checkout 与格式检查保持一致，并确保钩子可由 shell 执行。
 
 ## 发布约束
 
